@@ -1,0 +1,12 @@
+Go is an open-source programming language developed by google 
+
+Features:
+* Focus on simplicity, clarity & scalability
+* High performance & Focus on Concurrency (Popular for tasks that benefit from multi-threading)
+* Batteries included (Go comes with a standard library, many core features are built-in)
+* Static Typing (Go is a type-safe language, Allows you to catch many errors early)
+
+Popular Use-cases
+* Networking & APIs
+* Microservices
+* CLI Tools
