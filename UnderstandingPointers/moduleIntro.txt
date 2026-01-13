@@ -1,0 +1,9 @@
+Working with addresses instead of Values 
+    - what are pointers?
+    - why does this feature exist?
+    - how can you work with Pointers?
+
+Advantage of Pointers 
+    - Avoid Unnecessary Value Copies
+    - Directly Mutate Value 
+    

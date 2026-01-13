@@ -1,0 +1,5 @@
+Structs - Grouping Data & Functions into Collections
+    - What are Structs?
+    - Creating & Using Structs
+    - Adding Methods to Structs
+    
