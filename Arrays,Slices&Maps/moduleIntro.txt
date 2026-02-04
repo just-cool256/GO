@@ -1,0 +1,5 @@
+Arrays, Slices & Maps(Storing Data in Collections)
+    - Understanding Arrays & Array Limitations
+    - Understanding & Using Slices
+    - Slices deep Dive
+    - Understanding & Using Maps
