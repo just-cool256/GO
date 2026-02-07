@@ -13,4 +13,19 @@ func main() {
 
 	featuredPrices := prices[1:3]
 	fmt.Println(featuredPrices)
+
+	featuredPrices = prices[:3]
+	fmt.Println(featuredPrices)
+
+	featuredPrices = prices[1:]
+	fmt.Println(featuredPrices)
+
+	featuredPrices = prices[:]
+	fmt.Println(featuredPrices)
+
+	featuredPrices = prices[:3][1:]
+	fmt.Println(featuredPrices)
+
+	// featuredPrices = prices[-1:] - can't work with negative indicies
+	// featuredPrices = prices[1:7] - can't pick higher end index than the original array has
 }
