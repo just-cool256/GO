@@ -2,10 +2,20 @@ package main
 
 import "fmt"
 
+// With Slices you can create dynamic arrays
+func main() {
+	// prices := []float64{} //empty slice
+	// In this manner Go will automtically create a slice for you, and since a slice is based on an array, it will also create an array for you behind the scenes, but it will automtically ditch that array and create a new array if your slice grows beyond the balance of that behind the scenes stored array.
+
+	prices := []float64{10.99, 8.99} // In this way we can create a slice without having to specify the length of it, and we can also add as many values as we want in there.
+	fmt.Println(prices[0:1])
+}
+
+/*
 func main() {
 	var productNames [4]string = [4]string{"A Book"}
 	// productNames = [4]string {"A Book"}
-	prices := [4]float64{10.99, 9.99, 45.99, 20.0}
+	prices := [4]float64{10.99, 9.99, 45.99, 20.0} // Downside of using that array was that we had to define ahead of time how many values we'll have in there.
 	fmt.Println(prices)
 	fmt.Println(prices[2])
 	productNames[2] = "A Carpet"
@@ -25,6 +35,7 @@ func main() {
 	// Slices are like a reference, like a window into an array. When we created an array like prices that array is stored in memory.
 	// When we then create a slice based on that array, we get a window into that array.
 	// Therefore if you would modify an element in a slice, we would also modify the same element in the original array.
+
 	featuredPrices[0] = 199.99
 	fmt.Println(featuredPrices)
 	// fmt.Println(prices)
@@ -74,3 +85,4 @@ func main() {
 
 // When we suddenly select more than was previously stored in a slice - that works
 // Bcz if you select more to the end of an array, you can do that bcz go memorizes that, but it only work for more values to the right of the existing slice
+*/
