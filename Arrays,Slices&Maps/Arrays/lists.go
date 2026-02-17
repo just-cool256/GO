@@ -9,6 +9,15 @@ func main() {
 
 	prices := []float64{10.99, 8.99} // In this way we can create a slice without having to specify the length of it, and we can also add as many values as we want in there.
 	fmt.Println(prices[0:1])
+
+	prices[1] = 9.99
+	// prices[2] = 11.99 //it will give error while running the code
+	// panic: runtime error: index out of range [2] with length 2
+
+	// updatedPrices := append(prices, 5.99) // it will return a brand new slice with the new value added to it, but it will not modify the original slice that we created here. So if we want to have that new slice with the new value, we need to assign it to a variable.
+	// fmt.Println(updatedPrices, prices)
+	prices = append(prices, 5.99)
+	fmt.Println(prices)
 }
 
 /*
