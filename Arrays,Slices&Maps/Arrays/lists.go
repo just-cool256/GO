@@ -16,8 +16,14 @@ func main() {
 
 	// updatedPrices := append(prices, 5.99) // it will return a brand new slice with the new value added to it, but it will not modify the original slice that we created here. So if we want to have that new slice with the new value, we need to assign it to a variable.
 	// fmt.Println(updatedPrices, prices)
-	prices = append(prices, 5.99)
+	prices = append(prices, 5.99, 12.99, 29.99)
 	fmt.Println(prices)
+
+	// To combine 2 slices
+	discountPrices := []float64{101.99, 80.99, 59.99}
+	prices = append(prices, discountPrices...)
+	fmt.Println(prices)
+
 }
 
 /*
