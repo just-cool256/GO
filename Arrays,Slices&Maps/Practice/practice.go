@@ -1,7 +1,48 @@
 package main
 
+import "fmt"
+
+type Product struct {
+	title string
+	id    int
+	price float64
+}
+
 func main() {
-	
+	hobbies := [3]string{"Trekking", "Traveling", "Coding"}
+	fmt.Println(hobbies)
+	fmt.Println("First hobby:", hobbies[0])
+	fmt.Println("Second and third hobby:", hobbies[1:3])
+
+	// Creating slices in two different ways
+	slice1 := hobbies[0:2] // Slice containing the first and second element
+	slice2 := hobbies[:2]  // Another way to create the same slice
+
+	fmt.Println("Slice 1:", slice1)
+	fmt.Println("Slice 2:", slice2)
+
+	// Re-slicing to contain the second and last element
+	slice1 = slice1[1:3] // Now slice1 contains the second and last element of the original array
+	fmt.Println("Re-sliced Slice 1:", slice1)
+
+	// Dynamic array (slice) for course goals
+	courseGoals := []string{"Learn Go", "Build a project"}
+	fmt.Println("Course Goals:", courseGoals)
+
+	// Updating the second goal and adding a third goal
+	courseGoals[1] = "Master Go"
+	courseGoals = append(courseGoals, "Contribute to open source")
+	fmt.Println("Updated Course Goals:", courseGoals)
+
+	// Creating a dynamic list of products
+	products := []Product{
+		{"Laptop", 1, 999.99},
+		{"Smartphone", 2, 499.99},
+	}
+	fmt.Println("Products:", products)
+
+	products = append(products, Product{"Tablet", 3, 299.99})
+	fmt.Println("Updated Products:", products)
 }
 
 // Time to practice what you learned!
