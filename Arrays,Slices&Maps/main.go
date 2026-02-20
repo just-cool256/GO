@@ -15,4 +15,22 @@ func main() {
 	// But now with pre allocated memory, appending items here is more efficient, because Go now doesn't have to go to the memory and allocate new space, instead it can use the existing space because we already reserved enough space. And only once we go beyond 5 capacity limit here, it'll have to allocate new space.
 
 	fmt.Println(userNames)
+
+	// You can use make for making slices and maps both
+	// courseRatings := map[string]float64{}
+	// courseRatings["go"] = 4.7
+	// courseRatings["react"] = 4.8
+
+	// with map we can only pass 1 additional argument in make
+	// bcz here we can't set any empty slots. Instead we can justify the intended length of that map
+	// So, Go can go ahead and pre-allocate memory.
+	courseRatings := make(map[string]float64, 3)
+
+	courseRatings["go"] = 4.7
+	courseRatings["react"] = 4.8
+	courseRatings["ansible"] = 4.7
+	// courseRatings["angular"] = 4.8 // go would have to reallocate memory only when
+
+	fmt.Println(courseRatings)
+
 }
