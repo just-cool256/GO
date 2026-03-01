@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+// custom type
+type floatMap map[string]float64
+
+// we can also add methods to custom types
+func (m floatMap) output() {
+	fmt.Println(m)
+}
+
 func main() {
 	// We could make Go aware of the fact that we will add those two elements eventually. Because when we do, Go is able to, behind the scenes, create a bigger array right from the start, and it then doesn't have to recreate those arrays all the time, which is a bit more efficient. And you can tell Go that you need a bigger array behind the scenes by using the make function.
 	// userNames := []string{}
@@ -24,13 +32,16 @@ func main() {
 	// with map we can only pass 1 additional argument in make
 	// bcz here we can't set any empty slots. Instead we can justify the intended length of that map
 	// So, Go can go ahead and pre-allocate memory.
-	courseRatings := make(map[string]float64, 3)
+	// courseRatings := make(map[string]float64, 3)
+	courseRatings := make(floatMap, 3)
 
 	courseRatings["go"] = 4.7
 	courseRatings["react"] = 4.8
 	courseRatings["ansible"] = 4.7
 	// courseRatings["angular"] = 4.8 // go would have to reallocate memory only when
 
-	fmt.Println(courseRatings)
+	courseRatings.output()
+
+	//fmt.Println(courseRatings)
 
 }
