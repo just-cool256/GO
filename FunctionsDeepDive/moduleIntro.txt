@@ -1,0 +1,5 @@
+Functions Deep Dive - Beyond the basics 
+    - Using Functions as Values 
+    - Anonymous Functions
+    - Recursion
+    - Variadic Functions
